@@ -1,0 +1,21 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+package calendar_proto;
+
+
+service CalendarService{
+    rpc RecieveData(AddNote) returns (Status);
+}
+
+message AddNote {
+    int32 id = 1;
+    string note = 2;
+    string date_note = 3;
+    string date_remind = 4;
+    string email = 5;
+}
+
+message Status {
+    bool status = 1;
+    
+}

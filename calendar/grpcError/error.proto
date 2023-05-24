@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package error_proto;
+
+service ErrorMethod{
+    rpc SendErrot(AddError) returns (Status);
+}
+
+message AddError {
+    int32 id = 1;
+    bool flag = 2;
+}
+
+message Status {
+    bool status = 1;
+    
+}
